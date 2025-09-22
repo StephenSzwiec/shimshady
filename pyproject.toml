@@ -1,0 +1,28 @@
+[project]
+name = "shimshady"
+version = "0.1.0"
+description = "A simple CLI tool to shim Duo MFA, red-teaming the process because phones are annoying and expensive."
+readme = "README.md"
+authors = [
+    { name = "stephenszwiec", email = "stephen.szwiec@ndsu.edu" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "cryptography>=45.0.6",
+    "datetime>=5.5",
+    "pathlib>=1.0.1",
+    "pillow>=11.3.0",
+    "pycryptodome>=3.23.0",
+    "pyzbar>=0.1.9",
+    "requests>=2.32.5",
+]
+
+[project.scripts]
+shimshady = "shimshady.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.targets.wheel]
+packages = ["src/shimshady"]
