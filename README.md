@@ -9,4 +9,4 @@ Shimshady is a Duo 2FA shim that can parse QR codes or accept activation codes, 
 
 - After cloning and changing directory, `uv tool install .` will install.
 - CLI script entry point: `shimshady` command.
-- Probably a good idea to run `chmod -R 0600 ~/.config/shimshady` after initial setup.
+- Probably a good idea to make sure `~/.config/shimshady` items are user-readable only after initial setup (it should do this automatically on POSIX systems.)
